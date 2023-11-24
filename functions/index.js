@@ -14,5 +14,5 @@ const logger = require("firebase-functions/logger");
 // https://firebase.google.com/docs/functions/get-started
 
 exports.helloWorld =  onRequest(async (req, res) => {
-    res.json({result: `Hello world`});
+    res.json({result: `Hello world new value`});
   });
