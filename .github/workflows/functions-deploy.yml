@@ -37,7 +37,4 @@ jobs:
         run: yarn global add firebase firebase-tools
 
       - name: Deploy functions
-        run: cd functions && yarn run deploy
-
-      - name: Deploy firestore rules and indexes
-        run: firebase deploy --only firestore
+        run: cd functions && yarn run deploy --debug
