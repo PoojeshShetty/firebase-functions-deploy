@@ -27,11 +27,11 @@ jobs:
           name: "credentials.json"
           json: ${{ secrets.ca }}
 
-      - name: check contents
-        run: cat credentials.json
-
       - name: Set environment variable with path to credentials.json
         run: echo "GOOGLE_APPLICATION_CREDENTIALS=$(readlink -f credentials.json)" >> $GITHUB_ENV
+
+      - name: check contents
+        run: cat credentials.json
 
       - name: Install dependencies
         run: yarn
