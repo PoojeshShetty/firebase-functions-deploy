@@ -37,4 +37,4 @@ jobs:
         run: yarn global add firebase firebase-tools
 
       - name: Deploy functions
-        run: cd functions && yarn run deploy --debug
+        run: cd functions && yarn run deploy
