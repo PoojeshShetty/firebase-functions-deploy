@@ -25,7 +25,7 @@ jobs:
         uses: jsdaniell/create-json@1.1.2
         with:
           name: "credentials.json"
-          json: ${{ secrets.cGOOGLE_APPLICATION_CREDENTIALS }}
+          json: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
 
       - name: Set environment variable with path to credentials.json
         run: echo "GOOGLE_APPLICATION_CREDENTIALS=$(readlink -f credentials.json)" >> $GITHUB_ENV
